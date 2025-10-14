@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EludeReality - Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <script defer src="script.js"></script>
+    <script defer src="livestream.js"></script>
+    <script defer src="posts.js"></script>
+    <script defer src="gallery.js"></script>
+    <script defer src="shop.js"></script>
+</head>
+<body>
+
+<section class="header"> 
+        <nav class="navbar">
+            <div class="nav-section left">
+                <ul> 
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+            </div> 
+
+            <div class="logo">
+                <a href="home.html"><img src="images/for tm logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="nav-section right">
+                <ul>
+                    <li><a href="live.html">Live</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<aside class="sidebar">
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">News & Updates</span>
+      </div>
+      <ul class="category-list">
+        <li>What's New in Production</li>
+        <li>Behind the Scenes</li>
+        <li>Upcoming Projects</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">Upcoming Events</span>
+      </div>
+      <ul class="category-list">
+        <li>Pop-up Events</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">Random Fun Topics</span>
+      </div>
+      <ul class="category-list">
+        <li>Todays Industry</li>
+        <li>Latest movie & tv review</li>
+      </ul>
+    </div>
+  </aside>
+
+<header class="blog-header">
+    <h1>Our Blog</h1>
+    <p>Creative insights, stories, and updates from our team.</p>
+  </header>
+
+  <main class="blog-container" id="blogContainer">
+    <!-- Blog posts will load here dynamically -->
+  </main>
+
+  <footer class="blog-footer">
+    <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+  </footer>
+
+  <script src="posts.js"></script>
+  <script>
+    const container = document.getElementById("blogContainer");
+
+    posts.forEach(post => {
+      const article = document.createElement("article");
+      article.classList.add("blog-post");
+      article.innerHTML = `
+        <img src="${post.image}" alt="${post.title}">
+        <div class="blog-content">
+          <h2>${post.title}</h2>
+          <p class="date">${post.date}</p>
+          <p>${post.preview}</p>
+          <a href="post.html?id=${post.id}" class="read-more">Read More →</a>
+        </div>
+      `;
+      container.appendChild(article);
+    });
+  </script>
+
+
+</section>        
+
+
+
+
+
+    
+</body>
+</html>

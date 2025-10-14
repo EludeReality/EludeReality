@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EludeReality - Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <script defer src="script.js"></script>
+    <script defer src="livestream.js"></script>
+    <script defer src="posts.js"></script>
+    <script defer src="gallery.js"></script>
+    <script defer src="shop.js"></script>
+</head>
+<body>
+
+<section class="header"> 
+        <nav class="navbar">
+            <div class="nav-section left">
+                <ul> 
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                </ul>
+            </div> 
+
+            <div class="logo">
+                <a href="home.html"><img src="images/for tm logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="nav-section right">
+                <ul>
+                    <li><a href="live.html">Live</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<aside class="sidebar">
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">Photoshoot Bookings</span>
+      </div>
+      <ul class="category-list">
+        <li>Creative</li>
+        <li>Portraits</li>
+        <li>Lifestyle</li>
+        <li>Fashion</li>
+        <li>Group</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">Videoshoot Bookings</span>
+      </div>
+      <ul class="category-list">
+        <li>Studio</li>
+        <li>Headshots</li>
+        <li>Group</li>
+        <li>Events</li>
+        <li>Sports</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">Apparel</span>
+      </div>
+      <ul class="category-list">
+        <li>Hoodies</li>
+        <li>T-shirts</li>
+        <li>Sweatpants</li>
+        <li>Shorts</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">Prints</span>
+      </div>
+      <ul class="category-list">
+        <li>Canvas Prints</li>
+        <li>Acrylic Prints</li>
+        <li>Metal Prints</li>
+        <li>Paper Prints</li>
+        <li>Wood Prints</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <div class="category-title">
+        <span class="icon">🌌</span>
+        <span class="text">Community Support</span>
+      </div>
+      <ul class="category-list">
+        <li>Subscriptions</li>
+        <li>Donations</li>
+      </ul>
+    </div>
+  </aside>
+
+
+<main class="main">
+<section class="shop-grid" id="shop-grid">
+<!-- Example product cards -->
+<article class="product" data-id="p1" data-price="25.00">
+<img src="https://images.unsplash.com/photo-1585386959984-a41552231693?w=1200&q=60" alt="Galaxy Tee">
+<h3 class="product-title">Galaxy Tee</h3>
+<p class="product-price">$25.00</p>
+<button class="btn add-btn">Add to cart</button>
+</article>
+
+
+<article class="product" data-id="p2" data-price="45.00">
+<img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=1200&q=60" alt="Cosmic Hoodie">
+<h3 class="product-title">Cosmic Hoodie</h3>
+<p class="product-price">$45.00</p>
+<button class="btn add-btn">Add to cart</button>
+</article>
+
+
+<article class="product" data-id="p3" data-price="15.00">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=60" alt="Creative Poster">
+<h3 class="product-title">Creative Poster</h3>
+<p class="product-price">$15.00</p>
+<button class="btn add-btn">Add to cart</button>
+</article>
+
+
+<!-- Add more products as needed -->
+</section>
+</main>
+
+
+<!-- Product Modal -->
+<div id="product-modal" class="modal" aria-hidden="true">
+<div class="modal-content">
+<button class="modal-close" id="modal-close">✕</button>
+<div class="modal-body">
+<img id="modal-img" src="" alt="">
+<div class="modal-info">
+<h2 id="modal-title"></h2>
+<p id="modal-desc">High-quality product from our studio. Replace this with a longer description.</p>
+<p class="modal-price" id="modal-price"></p>
+<div class="modal-actions">
+<label>
+Qty: <input type="number" id="modal-qty" min="1" value="1">
+</label>
+<button class="btn add-btn" id="modal-add">Add to cart</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Cart Sidebar -->
+<aside id="cart" class="cart" aria-hidden="true">
+<div class="cart-header">
+<h3>Your Cart</h3>
+<button id="cart-close" class="btn secondary">Close</button>
+</div>
+<div id="cart-items" class="cart-items">
+<!-- items inserted here -->
+</div>
+
+
+<div class="cart-summary">
+<div class="summary-row"><span>Subtotal</span><span>$<span id="summary-subtotal">0.00</span></span></div>
+
+
+<div class="summary-row">
+<label for="shipping-select">Shipping</label>
+<select id="shipping-select">
+<option value="0" data-price="0">Free (0.00)</option>
+<option value="standard" data-price="5">Standard - $5.00</option>
+<option value="expedited" data-price="15">Expedited - $15.00</option>
+</select>
+</div>
+
+
+<div class="summary-row"><span>Tax (<span id="tax-rate">8%</span>)</span><span>$<span id="summary-tax">0.00</span></span></div>
+<div class="summary-row total-row"><strong>Total</strong><strong>$<span id="summary-total">0.00</span></strong></div>
+</div>
+
+
+<div class="cart-footer">
+<div class="checkout-actions">
+<button id="paypal-checkout" class="btn">Checkout with PayPal</button>
+<button id="stripe-checkout" class="btn alt">Checkout with Stripe</button>
+</div>
+<p class="checkout-note">PayPal: replace <code>YOUR_PAYPAL_EMAIL</code> in the JS. Stripe: requires server (see server.js).</p>
+</div>
+</aside>
+
+
+<div id="overlay" class="overlay" hidden></div>
+
+
+<footer class="footer">
+<p>&copy; 2025 Your Production Company. All rights reserved.</p>
+</footer>
+
+
+
+
+</section>        
+
+
+
+    
+</body>
+</html>
