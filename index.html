@@ -15,6 +15,7 @@
 
     <section class="header"> 
         <nav class="navbar">
+            <div class="hamburger">&#9776;</div>
             <div class="nav-section left">
                 <ul> 
                     <li><a href="home.html">Home</a></li>
@@ -35,7 +36,22 @@
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                
             </div>
+                <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+  </nav>
+
+  <!-- Mobile dropdown menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
         </nav>
 
 <section id="home" class="hero">
@@ -68,8 +84,17 @@
     </section>
 
 
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    // Optionally change icon when menu is open
+    hamburger.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+  });
+</script>
 
 
-    
 </body>
 </html>

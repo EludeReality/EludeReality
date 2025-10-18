@@ -334,3 +334,14 @@ body {
   .product img { height:170px; }
   .cart { width:100%; max-width:100%; }
 }
+
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+}
