@@ -316,6 +316,29 @@
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .nav-section ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo img {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 
