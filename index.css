@@ -4,10 +4,12 @@
 }
 .header{
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
+    overflow: hidden;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("images/background.png");
     background-position: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size:cover;
     position: relative;
 }
 .navbar {
@@ -295,149 +297,28 @@ p0 {
   padding: 20px 0;
 }
 
-/* Hide desktop nav on mobile */
 @media (max-width: 768px) {
-  .nav-section {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-
-
-
-
-
-
-
-/* ===== Responsive Fixes ===== */
-@media (max-width: 1024px) {
-  .nav-section ul {
-    gap: 100px;
-  }
-
-  .logo img {
-    height: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Stack navbar vertically */
   .navbar {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .nav-section ul {
     flex-direction: column;
     align-items: center;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.6);
-  }
-
-  /* Make nav items closer together */
-  .nav-section ul {
-    flex-direction: column;
     gap: 20px;
   }
 
-  .nav-section a {
-    font-size: 18px;
-  }
-
-  /* Make logo smaller on phones */
   .logo img {
-    height: 120px;
+    height: 150px;
+    margin-bottom: 10px;
   }
 
-  /* Adjust hero text sizing */
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  /* Make background fit better on small screens */
-  .header {
-    background-size: contain;
-    background-position: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-section a {
-    font-size: 16px;
-  }
-
-  .logo img {
-    height: 90px;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 14px;
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 
-/* === Responsive Space Elements === */
-
-/* Medium screens (tablets and small laptops) */
-@media (max-width: 1024px) {
-  .planet-container {
-    bottom: 8%;
-    left: 8%;
-  }
-
-  .planet {
-    width: 90px;
-    height: 90px;
-  }
-
-  #stars, #stars2, #stars3 {
-    background-size: 150% auto;
-  }
-}
-
-/* Small screens (phones) */
-@media (max-width: 768px) {
-  .planet-container {
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%); /* center planet horizontally */
-  }
-
-  .planet {
-    width: 70px;
-    height: 70px;
-  }
-
-  #stars, #stars2, #stars3 {
-    background-size: 200% auto; /* enlarge background texture for mobile */
-  }
-
-  .shooting-stars::before,
-  .shooting-stars::after {
-    height: 70px;
-  }
-}
-
-/* Extra small screens (very narrow phones) */
-@media (max-width: 480px) {
-  .planet {
-    width: 50px;
-    height: 50px;
-  }
-
-  .planet-container {
-    bottom: 3%;
-  }
-
-  #stars, #stars2, #stars3 {
-    background-size: 250% auto;
-  }
-}

@@ -5,6 +5,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
+    overflow: auto;
     background: linear-gradient(-45deg, #2b1055, #2b1055, black, #00bfff);
     background-position: center;
     background-size: cover;
@@ -339,6 +340,7 @@
     align-items: center;
   }
 }
+
 
 
 
