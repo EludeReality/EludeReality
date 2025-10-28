@@ -4,7 +4,7 @@ return shippingSelect.value || 'free';
 }
 
 
-function getShippingAmount() {
+function getShippingAmount() {s
 const key = getSelectedShippingKey();
 return SHIPPING_OPTIONS[key] ?? 0;
 }

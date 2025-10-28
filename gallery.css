@@ -397,7 +397,89 @@
 
 
 
+/* Hide menu + links by default (desktop) */
+.menu-icon,
+.nav-links {
+  display: none;
+}
 
+/* --- MOBILE / TABLET ONLY --- */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    width: 30px;
+    height: 22px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .menu-icon span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Dropdown menu (hidden initially) */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    animation: fadeSlide 0.3s ease forwards;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #00bfff;
+  }
+}
+
+/* Hamburger → X animation */
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Dropdown fade animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
