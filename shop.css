@@ -457,3 +457,12 @@ body {
     transform: translateY(0);
   }
 }
+
+
+
+/* Hide normal nav links on smaller screens */
+@media (max-width: 768px) {
+  .nav-section ul {
+    display: none;
+  }
+}
