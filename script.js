@@ -31,3 +31,12 @@ const hamburger = document.getElementById("hamburger");
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
+
+ 
+  const menuIcon = document.getElementById('menu-icon');
+
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('open');
+    navLinks.classList.toggle('show');
+  });
+

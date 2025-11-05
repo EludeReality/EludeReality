@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EludeReality</title>
-     <link rel="stylesheet" href="home.css">
+     <link rel="stylesheet" href="practice.css">
     <script defer src="script.js"></script>
     <script defer src="livestream.js"></script>
     <script defer src="posts.js"></script>
@@ -41,7 +41,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="practice.css" />
 
   <!-- Icons (Optional: Font Awesome for social/media icons) -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
@@ -120,7 +120,7 @@
     <nav class="navbar">
             <div class="nav-section left">
                 <ul> 
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="videos.html">Videos</a></li>
@@ -169,19 +169,24 @@
 
 <!-- Include this script at the bottom of body -->
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
-<script>
-  function toggleMenu() {
-    document.getElementById("nav-links").classList.toggle("show");
-    document.getElementById("menu-icon").classList.toggle("open");
-  }
-</script>
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuIcon.classList.toggle('open');
+    });
+
+    // Optional: close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.classList.remove('open');
+      });
+    });
+  </script>
+
+
 
 </body>
 </html>

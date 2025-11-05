@@ -341,19 +341,19 @@ body {
 
 .stars {
   background: url('https://www.transparenttextures.com/patterns/stardust.png');
-  animation: moveStars 40s linear infinite;
+  animation: moveStars 60s linear infinite;
 }
 
 .stars2 {
   background: url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity: 0.2;
+  opacity: 0.5;
   animation: moveStars 20s linear infinite;
 }
 
 .stars3 {
   background: url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity: 0.1;
-  animation: moveStars 30s linear infinite;
+  opacity: 0.3;
+  animation: moveStars 80s linear infinite;
 }
 
 @keyframes moveStars {
