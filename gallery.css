@@ -415,14 +415,14 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 20;
+    z-index: 1001;
   }
 
   .menu-icon span {
     display: block;
     height: 4px;
     width: 100%;
-    background: black;
+    background: #00bfff;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
@@ -438,6 +438,7 @@
     border-radius: 10px;
     padding: 15px;
     width: 200px;
+    z-index: 1000;
     animation: fadeSlide 0.3s ease forwards;
   }
 
@@ -447,7 +448,7 @@
 
   .nav-links a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: 500;
     padding: 10px 0;
     transition: color 0.3s;
