@@ -297,12 +297,35 @@
 }
 
 /* Footer */
-.footer {
-  background-color: #1a1a1a;
-  text-align: center;
-  padding: 1rem;
+footer {
+  background-color: transparent;          /* Dark background */
+  color: white;                    /* Text color */
+  text-align: center;              /* Center text */
+  padding: 20px 0;                 /* Space inside footer */
+  position: relative;              /* Keeps it at bottom naturally */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-container p {
+  margin: 10px 0;
   font-size: 0.9rem;
-  color: #bbbbbb;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00bfff; /* Change color on hover */
 }
 
 
